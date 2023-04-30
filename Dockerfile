@@ -1,6 +1,6 @@
 FROM httpd:latest
 MAINTAINER siva <ksiva8824@gmail.com>
-RUN apt-get -y update
-COPY ./beachresort /var/www/html/
+RUN rm /var/www/html/index.html
+ADD https://github.com/Siva051997/beachresort/tree/master/beachresort /var/www/html/
 WORKDIR /var/www/html/
 EXPOSE 80
