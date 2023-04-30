@@ -1,5 +1,6 @@
 FROM httpd:latest
 MAINTAINER siva <ksiva8824@gmail.com>
-RUN /var/www/html/index.html
-COPY */beachresort /var/www/html/
+RUN apt-get -y update
+COPY ./beachresort /var/www/html/
+WORKDIR /var/www/html/index.html
 EXPOSE 80
