@@ -1,7 +1,5 @@
-FROM httpd:latest
+FROM apache2:latest
 MAINTAINER siva <ksiva8824@gmail.com>
-RUN apt-get -y update && \
-    rm /var/www/html/index.html
-COPY beachresort /var/www/html/
-WORKDIR /var/www/html/
+RUN usr/local/apache2/htdocs/index.html
+COPY */beachresort /var/www/html/
 EXPOSE 80
